@@ -1,17 +1,16 @@
-import React from "react";
 import NavBar from "@/comps/NavBar";
 import Footer from "@/comps/Footer";
 
-export default function DetailLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <main className="relative w-full">
-      <NavBar />
+    <>
+      <NavBar showHome={false} />
       {children}
       <Footer />
-    </main>
+    </>
   );
 }
