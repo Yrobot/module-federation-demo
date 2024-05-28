@@ -1,0 +1,3 @@
+
+    export type RemoteKeys = 'next-app/noop' | 'next-app/react' | 'next-app/react-dom' | 'next-app/next/router' | 'next-app/Page';
+    type PackageType<T> = T extends 'next-app/Page' ? typeof import('next-app/Page') :T extends 'next-app/next/router' ? typeof import('next-app/next/router') :T extends 'next-app/react-dom' ? typeof import('next-app/react-dom') :T extends 'next-app/react' ? typeof import('next-app/react') :T extends 'next-app/noop' ? typeof import('next-app/noop') :any;

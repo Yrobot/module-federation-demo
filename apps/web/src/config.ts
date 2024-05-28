@@ -1,4 +1,4 @@
-export default {
+const config = {
   title: "@yrobot/Module-Federation-Demo",
   yrobot: "https://github.com/Yrobot",
   blog: "https://blog.yrobot.top",
@@ -14,11 +14,14 @@ export const apps = [
       "A tool which makes scroll-container auto scroll to the bottom easy.",
     origin: "http://localhost:3001",
     metaPath: undefined,
+    federationPath: undefined,
   },
   {
     title: "i18next-ssg",
     key: "i18next-ssg",
     description: "The i18n tool for next.js ssg project.",
-    // origin: "http://localhost:3001",
+    origin: "http://localhost:3001",
   },
 ];
+
+export default config;

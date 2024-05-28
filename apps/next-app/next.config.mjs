@@ -5,10 +5,7 @@ import pack from "./package.json" assert { type: "json" };
 
 const remotes = (isServer) => {
   const location = isServer ? "ssr" : "chunks";
-  return {
-    // shop: `shop@http://localhost:3002/_next/static/${location}/remoteEntry.js`,
-    "next-app": `next-app@http://localhost:3002/_next/static/${location}/remoteEntry.js`,
-  };
+  return {};
 };
 
 const nextConfig = {
@@ -20,13 +17,10 @@ const nextConfig = {
         filename: "static/chunks/remoteEntry.js",
         dts: true,
         exposes: {
-          "./track": "./src/track.ts",
+          "./Page": "./src/pages/index.tsx",
         },
         remotes: remotes(options.isServer),
         shared: {},
-        extraOptions: {
-          exposePages: true,
-        },
       })
     );
     return config;
