@@ -1,10 +1,14 @@
-import { lazy } from "react";
+import dynamic from "next/dynamic";
 
 // import type { Metadata } from "next";
 import { apps } from "@/config";
 
-import Page from "next-app/Page";
-// const Page = () => null;
+import("next-app/style").then((res) => {
+  console.log(res);
+});
+const Page = dynamic(() => import("next-app/Page"), {
+  ssr: false,
+});
 
 type Props = {
   params: { id: string };
