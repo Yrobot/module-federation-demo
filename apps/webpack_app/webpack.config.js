@@ -34,18 +34,18 @@ module.exports = {
     new ModuleFederationPlugin({
       name,
       filename: "federation.js",
-      // dts: true,
+      dts: true,
       exposes: {
         "./Page": "./src/App",
       },
-      // shared: {
-      //   react: {
-      //     singleton: true,
-      //   },
-      //   "react-dom": {
-      //     singleton: true,
-      //   },
-      // },
+      shared: {
+        react: {
+          singleton: true,
+        },
+        "react-dom": {
+          singleton: true,
+        },
+      },
     }),
     new HtmlWebpackPlugin(),
   ],

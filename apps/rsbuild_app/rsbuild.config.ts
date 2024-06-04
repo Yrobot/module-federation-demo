@@ -17,10 +17,11 @@ export default defineConfig({
       appendPlugins([
         new ModuleFederationPlugin({
           name: pack.name,
+          filename: "federation.js",
+          dts: true,
           exposes: {
             "./Page": "./src/App.tsx",
           },
-          dts: true,
           shared: ["react", "react-dom"],
         }),
       ]);
