@@ -31,22 +31,22 @@ module.exports = {
     ],
   },
   plugins: [
-    // new ModuleFederationPlugin({
-    //   name,
-    //   filename: "remoteEntry.js",
-    //   dts: true,
-    //   exposes: {
-    //     "./Page": "./src/App.tsx",
-    //   },
-    //   shared: {
-    //     react: {
-    //       singleton: true,
-    //     },
-    //     "react-dom": {
-    //       singleton: true,
-    //     },
-    //   },
-    // }),
+    new ModuleFederationPlugin({
+      name,
+      filename: "federation.js",
+      // dts: true,
+      exposes: {
+        "./Page": "./src/App",
+      },
+      // shared: {
+      //   react: {
+      //     singleton: true,
+      //   },
+      //   "react-dom": {
+      //     singleton: true,
+      //   },
+      // },
+    }),
     new HtmlWebpackPlugin(),
   ],
 };
