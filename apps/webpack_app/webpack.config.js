@@ -38,14 +38,7 @@ module.exports = {
       exposes: {
         "./Page": "./src/App",
       },
-      shared: {
-        react: {
-          singleton: true,
-        },
-        "react-dom": {
-          singleton: true,
-        },
-      },
+      shared: {},
     }),
     new HtmlWebpackPlugin(),
   ],

@@ -4,11 +4,9 @@ import { ModuleFederationPlugin } from "@module-federation/enhanced/rspack";
 import pack from "./package.json";
 
 export default defineConfig({
+  plugins: [pluginReact()],
   dev: {
     assetPrefix: "http://localhost:3003/",
-  },
-  server: {
-    port: 3003,
   },
   tools: {
     rspack: (config, { appendPlugins }) => {
@@ -22,10 +20,9 @@ export default defineConfig({
           exposes: {
             "./Page": "./src/App.tsx",
           },
-          shared: ["react", "react-dom"],
+          shared: [],
         }),
       ]);
     },
   },
-  plugins: [pluginReact()],
 });

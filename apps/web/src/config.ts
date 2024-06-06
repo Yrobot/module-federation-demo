@@ -8,19 +8,24 @@ const config = {
 
 export const apps = [
   {
-    title: "auto-scroll",
-    key: "auto-scroll",
-    description:
-      "A tool which makes scroll-container auto scroll to the bottom easy.",
+    title: "vite-app",
+    key: "vite_app",
+    description: "A Module Federation Demo Powered by Vite",
     origin: "http://localhost:3001",
-    metaPath: undefined,
-    federationPath: undefined,
+    entryPath: "/federation.js",
+    // entryPath: undefined,
   },
   {
-    title: "i18next-ssg",
-    key: "i18next-ssg",
-    description: "The i18n tool for next.js ssg project.",
-    origin: "http://localhost:3001",
+    title: "rsbuild-app",
+    key: "rsbuild_app",
+    description: "A Module Federation Demo Powered by Rsbuild",
+    origin: "http://localhost:3003",
+  },
+  {
+    title: "webpack-app",
+    key: "webpack_app",
+    description: "A Module Federation Demo Powered by Webpack",
+    origin: "http://localhost:3002",
   },
 ];
 

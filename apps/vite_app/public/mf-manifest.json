@@ -1,0 +1,45 @@
+{
+  "id": "vite_app",
+  "name": "vite_app",
+  "metaData": {
+    "name": "vite_app",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "1.0.0",
+      "buildName": "vite_app"
+    },
+    "remoteEntry": {
+      "name": "federation.js",
+      "path": "",
+      "type": "global"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "vite_app",
+    "pluginVersion": "0.1.16",
+    "publicPath": "http://localhost:3001/"
+  },
+  "shared": [],
+  "remotes": [],
+  "exposes": [
+    {
+      "id": "vite_app:Page",
+      "name": "Page",
+      "assets": {
+        "js": {
+          "sync": ["__federation_expose_Page-ngTM5ZrQ.js"],
+          "async": ["index-CCrUM9n_.js"]
+        },
+        "css": {
+          "sync": ["__federation_expose_Page-6GASMprN.css"],
+          "async": []
+        }
+      },
+      "path": "./Page"
+    }
+  ]
+}

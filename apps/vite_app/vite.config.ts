@@ -5,6 +5,9 @@ import { name } from "./package.json";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  build: {
+    assetsDir: "",
+  },
   plugins: [
     react(),
     federation({
@@ -13,9 +16,7 @@ export default defineConfig({
       exposes: {
         "./Page": "./src/App.tsx",
       },
-      remotes: {
-        web: "web@http://localhost:3000/federation.js",
-      },
+      remotes: {},
       shared: [],
     }),
   ],

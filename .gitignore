@@ -27,6 +27,8 @@ out/
 build
 dist
 
+# module federation
+@mf-types
 
 # Debug
 npm-debug.log*

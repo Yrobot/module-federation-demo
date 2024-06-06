@@ -6,8 +6,9 @@ import pack from "./package.json" assert { type: "json" };
 const remotes = (isServer) => {
   const location = isServer ? "ssr" : "chunks";
   return {
-    // shop: `shop@http://localhost:3002/_next/static/${location}/remoteEntry.js`,
-    "next-app": `next-app@http://localhost:3002/_next/static/${location}/remoteEntry.js`,
+    // rsbuild_app: `rsbuild_app@http://localhost:3003/federation.js`,
+    // webpack_app: `webpack_app@http://localhost:3002/federation.js`,
+    // vite_app: `vite_app@http://localhost:3001/federation.js`,
   };
 };
 
