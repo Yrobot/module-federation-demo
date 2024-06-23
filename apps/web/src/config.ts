@@ -3,7 +3,7 @@ const config = {
   yrobot: "https://github.com/Yrobot",
   blog: "https://blog.yrobot.top",
   github: "https://github.com/Yrobot/module-federation-demo",
-  themes: ["light", "dark", "cupcake"],
+  themes: ["light", "dark", "valentine"],
 };
 
 export const apps = [
@@ -13,6 +13,14 @@ export const apps = [
     description: "A Module Federation Demo Powered by Vite",
     origin: "http://localhost:3001",
     entryPath: "/federation.js",
+    // entryPath: undefined,
+  },
+  {
+    title: "next-app",
+    key: "next_app",
+    description: "A Module Federation Demo Powered by Next.js",
+    origin: "http://localhost:3004",
+    entryPath: "/mf/mf-manifest.json",
     // entryPath: undefined,
   },
   {

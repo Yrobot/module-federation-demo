@@ -1,0 +1,33 @@
+{
+  "name": "next_app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm run 'federation:dev' & npm run 'next:dev'",
+    "build": "npm run 'federation:build' && npm run 'next:build'",
+    "next:dev": "next dev -p 3004",
+    "next:build": "next build",
+    "start": "next start -p 3004",
+    "federation:dev": "rsbuild build -w",
+    "federation:build": "rsbuild build"
+  },
+  "dependencies": {
+    "next": "^14.2.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@module-federation/enhanced": "^0.1.21",
+    "@rsbuild/core": "^0.7.8",
+    "@rsbuild/plugin-react": "^0.7.8",
+    "@types/node": "^20",
+    "@types/react": "^18.3.2",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.19",
+    "daisyui": "^4.11.1",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5",
+    "webpack": "^5.91.0"
+  }
+}

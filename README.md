@@ -1,4 +1,9 @@
-# A Module Federation Demo between Next.js & Vite
+# A Module Federation 2.0 Demo
+
+> Next.js +
+> Webpack +
+> Rsbuild +
+> Vite -
 
 ## Run Dev
 
@@ -25,3 +30,7 @@ https://module-federation.io/guide/start/features.html
 - 目前 2.0 只支持 webpack 和 rsbuild，不支持 vite
   - @originjs/vite-plugin-federation 不支持 2.0 且有很多问题，作者也停更一段时间了
   - rolldown roadmap 计划支持 module federation，https://github.com/rolldown/rolldown/discussions/153#discussioncomment-8720087
+
+## 统一使用 rsbuild 处理 MF 的 output
+
+`$url/mf/entry.js`
