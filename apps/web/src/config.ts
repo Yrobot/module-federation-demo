@@ -12,7 +12,7 @@ export const apps = [
     key: "vite_app",
     description: "A Module Federation Demo Powered by Vite",
     origin: "http://localhost:3001",
-    entryPath: "/federation.js",
+    entryPath: "/mf/mf-manifest.json",
     // entryPath: undefined,
   },
   {

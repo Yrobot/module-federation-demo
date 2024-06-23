@@ -1,4 +1,4 @@
-import "./App.css";
+import "./custom.css";
 
 const App = () => {
   return (

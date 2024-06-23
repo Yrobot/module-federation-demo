@@ -27,10 +27,10 @@ export default defineConfig({
       appendPlugins([
         new ModuleFederationPlugin({
           name: pack.name,
-          filename: "federation.js",
+          filename: "entry.js",
           dts: true,
           exposes: {
-            "./Page": "./src/federation.ts",
+            "./Page": "./src/federation/Page.ts",
           },
           shared: [],
         }),

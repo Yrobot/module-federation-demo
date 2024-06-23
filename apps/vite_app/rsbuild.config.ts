@@ -4,9 +4,21 @@ import { ModuleFederationPlugin } from "@module-federation/enhanced/rspack";
 import pack from "./package.json";
 
 export default defineConfig({
-  plugins: [pluginReact()],
-  dev: {
-    assetPrefix: "http://localhost:3003",
+  server: {
+    publicDir: {
+      name: "./rsPublic",
+    },
+  },
+  source: {
+    entry: {
+      index: "./package.json",
+    },
+  },
+  output: {
+    distPath: {
+      root: "public/mf",
+    },
+    assetPrefix: "http://localhost:3001/mf/",
   },
   tools: {
     rspack: (config, { appendPlugins }) => {
@@ -15,7 +27,7 @@ export default defineConfig({
       appendPlugins([
         new ModuleFederationPlugin({
           name: pack.name,
-          filename: "mf/entry.js",
+          filename: "entry.js",
           dts: true,
           exposes: {
             "./Page": "./src/App.tsx",
@@ -24,5 +36,7 @@ export default defineConfig({
         }),
       ]);
     },
+    htmlPlugin: false,
   },
+  plugins: [pluginReact()],
 });

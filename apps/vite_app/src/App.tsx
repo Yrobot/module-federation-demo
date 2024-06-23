@@ -1,11 +1,11 @@
-import "./App.css";
+import "./custom.css";
 
 function App() {
   return (
     <div className="w-screen h-[80vh] flex items-center justify-center">
-      <div className="mockup-code w-40">
+      <div className="mockup-code w-96">
         <pre data-prefix="$">
-          <code>Hi this is auto-scroll</code>
+          <code>Hi this is vite + rsbuild app</code>
         </pre>
       </div>
     </div>
