@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@module-federation/enhanced": "^0.1.15",
-    "@module-federation/nextjs-mf": "8.3.16",
+    "@module-federation/nextjs-mf": "^8.3.24",
     "@types/node": "^20",
     "@types/react": "^18.3.2",
     "@types/react-dom": "^18.3.0",

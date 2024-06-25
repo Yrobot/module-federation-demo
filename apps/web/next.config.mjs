@@ -18,16 +18,17 @@ const nextConfig = {
     config.plugins.push(
       new NextFederationPlugin({
         name: pack.name,
-        filename: "static/chunks/remoteEntry.js",
+        filename: "static/chunks/entry.js",
         dts: true,
         exposes: {
           "./track": "./src/track.ts",
+          "./Footer": "./src/comps/Footer.tsx",
+          "./NavBar": "./src/comps/NavBar.tsx",
+          "./ThemePicker": "./src/comps/ThemePicker.tsx",
         },
         remotes: remotes(options.isServer),
         shared: {},
-        extraOptions: {
-          exposePages: true,
-        },
+        extraOptions: {},
       })
     );
     return config;

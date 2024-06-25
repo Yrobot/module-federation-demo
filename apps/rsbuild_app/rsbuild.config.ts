@@ -20,6 +20,9 @@ export default defineConfig({
           exposes: {
             "./Page": "./src/App.tsx",
           },
+          // remotes: {
+          //   web: `web@http://localhost:3000/_next/static/chunks/mf-manifest.json`,
+          // },
           shared: [],
         }),
       ]);
